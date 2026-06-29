@@ -1,7 +1,11 @@
 import sqlite3
 import os
 
-DB_NAME = "roots.sqlite3"
+
+# Get the absolute path of the directory containing this script (src/)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# Build the path to the data folder dynamically
+DB_NAME = os.path.join(BASE_DIR, "..", "data", "roots.sqlite3")
 
 def init_db():
     # Connect to the database (this creates the file if it doesn't exist)
