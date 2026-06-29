@@ -1,33 +1,33 @@
 class SarfEngine:
     def __init__(self):
-        # --- PAST TENSE SUFFIXES ---
+        # --- GEÇMİŞ ZAMAN (MADI) EKLERİ ---
         self.past_suffixes = {
-            "He (Huwa)": "َ", "They Two [M] (Huma)": "َا", "They [M] (Hum)": "ُوا",
-            "She (Hiya)": "َتْ", "They Two [F] (Huma)": "َتَا", "They [F] (Hunna)": "ْنَ",
-            "You [M] (Anta)": "ْتَ", "You Two [M/F] (Antuma)": "ْتُمَا", "You All [M] (Antum)": "ْتُمْ",
-            "You [F] (Anti)": "ْتِ", "You All [F] (Antunna)": "ْتُنَّ",
-            "I (Ana)": "ْتُ", "We (Nahnu)": "ْنَا"
+            "O [E] (Hüve)": "َ", "O İkisi [E] (Hüma)": "َا", "Onlar [E] (Hüm)": "ُوا",
+            "O [K] (Hiye)": "َتْ", "O İkisi [K] (Hüma)": "َتَا", "Onlar [K] (Hünne)": "ْنَ",
+            "Sen [E] (Ente)": "ْتَ", "Siz İkiniz [E/K] (Entüma)": "ْتُمَا", "Siz [E] (Entüm)": "ْتُمْ",
+            "Sen [K] (Enti)": "ْتِ", "Siz [K] (Entünne)": "ْتُنَّ",
+            "Ben (Ene)": "ْتُ", "Biz (Nahnü)": "ْنَا"
         }
 
-        # --- PRESENT TENSE AFFIXES (Prefix, Suffix) ---
+        # --- ŞİMDİKİ ZAMAN (MUDARI) EKLERİ (Önek, Sonek) ---
         self.present_affixes = {
-            "He (Huwa)": ("يَ", "ُ"),
-            "They Two [M] (Huma)": ("يَ", "َانِ"),
-            "They [M] (Hum)": ("يَ", "ُونَ"),
+            "O [E] (Hüve)": ("يَ", "ُ"),
+            "O İkisi [E] (Hüma)": ("يَ", "َانِ"),
+            "Onlar [E] (Hüm)": ("يَ", "ُونَ"),
             
-            "She (Hiya)": ("تَ", "ُ"),
-            "They Two [F] (Huma)": ("تَ", "َانِ"),
-            "They [F] (Hunna)": ("يَ", "ْنَ"),
+            "O [K] (Hiye)": ("تَ", "ُ"),
+            "O İkisi [K] (Hüma)": ("تَ", "َانِ"),
+            "Onlar [K] (Hünne)": ("يَ", "ْنَ"),
             
-            "You [M] (Anta)": ("تَ", "ُ"),
-            "You Two [M/F] (Antuma)": ("تَ", "َانِ"),
-            "You All [M] (Antum)": ("تَ", "ُونَ"),
+            "Sen [E] (Ente)": ("تَ", "ُ"),
+            "Siz İkiniz [E/K] (Entüma)": ("تَ", "َانِ"),
+            "Siz [E] (Entüm)": ("تَ", "ُونَ"),
             
-            "You [F] (Anti)": ("تَ", "ِينَ"),
-            "You All [F] (Antunna)": ("تَ", "ْنَ"),
+            "Sen [K] (Enti)": ("تَ", "ِينَ"),
+            "Siz [K] (Entünne)": ("تَ", "ْنَ"),
             
-            "I (Ana)": ("أَ", "ُ"),
-            "We (Nahnu)": ("نَ", "ُ")
+            "Ben (Ene)": ("أَ", "ُ"),
+            "Biz (Nahnü)": ("نَ", "ُ")
         }
 
     def conjugate_past_tense(self, root_string, zamir):
@@ -57,12 +57,7 @@ if __name__ == "__main__":
     engine = SarfEngine()
     test_root = "ك ت ب"
     
-    print(f"--- Testing Present Tense for root: {test_root} ---")
+    print(f"--- Şimdiki Zaman Testi: {test_root} ---")
     for zamir in engine.present_affixes.keys():
         result = engine.conjugate_present_tense(test_root, zamir)
-        print(f"{zamir.ljust(25)} : {result}")
-        
-    print(f"\n--- Testing Future Tense for root: {test_root} ---")
-    for zamir in engine.present_affixes.keys():
-        result = engine.conjugate_future_tense(test_root, zamir)
-        print(f"{zamir.ljust(25)} : {result}")
+        print(f"{zamir.ljust(30)} : {result}")
