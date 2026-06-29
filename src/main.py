@@ -11,8 +11,12 @@ from PySide6.QtGui import QFont, QKeySequence, QShortcut
 # Import our mathematical morphology engine
 from sarf_engine import SarfEngine 
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DB_NAME = os.path.join(BASE_DIR, "..", "data", "roots.sqlite3")
+if getattr(sys, 'frozen', False):
+    BASE_DIR = sys._MEIPASS
+else:
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+DB_NAME = os.path.join(BASE_DIR, "data", "roots.sqlite3")
 
 import re
 
