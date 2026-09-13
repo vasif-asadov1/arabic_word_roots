@@ -81,7 +81,5 @@ Generating a printable study guide for thousands of roots introduces a combinato
 
 ## 5. Author & Creator
 
-* **Vasif Asadov** 
-
-*Certified Microsoft Power BI Data Analyst Associate & Data Scientist specializing in relational database architectures, Python data pipelines, automation scripting, and algorithmic application design.*
+**Vasif Asadov.** *Certified Microsoft Power BI Data Analyst Associate & Data Scientist specializing in relational database architectures, Python data pipelines, automation scripting, and algorithmic application design.*
 
