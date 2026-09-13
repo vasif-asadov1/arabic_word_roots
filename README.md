@@ -75,3 +75,12 @@ Generating a printable study guide for thousands of roots introduces a combinato
 * **The Dictionary Standard Approach:** Following professional lexicographical standards (similar to Hans Wehr), the guide avoids clutter by displaying word cards in their foundational **3rd Person Masculine Singular (*Hüve*) base form** for both past and present tenses.
 * **The Master Mathematical Guide:** Page one of the PDF features an analytical breakdown of Arabic morphology, detailing the exact algebraic formulas for suffixes and prefixes. A master 14-row conjugation matrix using a model root (`ك ت ب`) demonstrates how any pronoun can be derived mathematically from the base form.
 * **Headless Browser Rendering:** The script compiles database queries into a print-optimized HTML document styled with professional web typography (*Amiri* and *Inter* fonts). This HTML is then processed by a headless **Chromium** instance via **Playwright** (`convert_to_pdf.py`) to output a pixel-perfect, pagination-safe A4 PDF study guide.
+
+
+---
+
+## 5. Author & Creator
+
+* **Vasif Asadov** 
+  * Certified Microsoft Power BI Data Analyst Associate & Data Scientist specializing in relational database architectures, Python data pipelines, automation scripting, and algorithmic application design.
+
